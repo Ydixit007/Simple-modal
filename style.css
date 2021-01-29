@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Spartan:wght@400;500;600;700&display=swap');
+@keyframes color-rotate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: RGB(28, 28, 28);
+}
+
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+}
+
+#modal-btn {
+    font-family: 'Spartan', sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+    background-color: #F2CB05;
+    border: none;
+    border-radius: 10px;
+    padding: 1.5rem;
+    opacity: 0.7;
+}
+
+#modal-btn:focus {
+    outline: none;
+}
+
+#modal-btn:hover {
+    opacity: 1;
+    transition: 300ms;
+}
+
+#modal-btn:active {
+    background-color: rgb(255, 172, 70);
+}
+
+.modal {
+    display: none;
+    width: 40%;
+    height: 80%;
+    background: #09587A;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.5rem;
+    right: -15px;
+    top: -25px;
+    background: white;
+    color: #09587A;
+    padding: 0.8rem;
+    border-radius: 10px;
+}
+
+.modal-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    background: url(material/bg2.png);
+    background-size: cover;
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.image>img {
+    width: 50%;
+}
+
+.image>img:hover {
+    animation: color-rotate 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.content {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content>h2 {
+    color: #F2CB05;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.content>p {
+    padding: 1rem;
+    color: white;
+    font-family: 'Spartan', sans-serif;
+}
